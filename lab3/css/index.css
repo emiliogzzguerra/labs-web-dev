@@ -35,6 +35,13 @@ header {
   margin: 20px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 main > :last-child {
   display: none;
 }
@@ -68,12 +75,29 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  
+  main > :last-child {
+    display: flex;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+  .menu > li {
+    margin: 0px 10px;
+  }
+
+  main {
+    flex-direction: row;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
